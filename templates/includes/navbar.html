@@ -1,0 +1,13 @@
+{% load static%}
+
+<header>
+    <div>
+        <a href="{% url 'core:index'%}">
+            <img src="{% static 'images/citi.svg'%}" alt="logo" id="logo-citi">
+        </a>
+        <a class="navbar-titulo" href="{% url 'core:index' %}">Blog PTA</a>
+        <a class="navbar-titulo" href="{% url 'core:contato' %}">Contato</a> 
+        <a class="navbar-titulo" href="{% url 'core:criar-post' %}">Postar</a> 
+        
+    </div>
+</header>

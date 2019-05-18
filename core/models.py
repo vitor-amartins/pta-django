@@ -5,8 +5,9 @@ from django.db import models
 class Post(models.Model):
     author = models.ForeignKey(
         'auth.User', on_delete=models.CASCADE, related_name='posts')
-    title = models.CharField("Título da postagem", max_length=100)
-    text = models.TextField("Texto da postagem", null=True, blank=True)
+    title = models.CharField("Título", max_length=100)
+    text = models.TextField("Texto", null=True, blank=True)
+    image = models.ImageField("Imagem", upload_to='institute/', null=True, blank=True)
     created_date = models.DateTimeField("Data de criação", auto_now_add=True)
     updated_date = models.DateTimeField("Data de edição", auto_now=True)
 
